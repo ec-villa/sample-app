@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>Dashboard Template · Bootstrap v5.0</title>
+
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Company name</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="#">Sign out</a>
+            </li>
+        </ul>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Dashboard.html">
+                                <span data-feather="home"></span>
+                                Dashboard
+                            </a>
+                            <ul>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="Dashboard-Controller.html">
+                                        <span data-feather="home"></span>
+                                        Dashboard - Controller
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">
+                                        <span data-feather="home"></span>
+                                        Dashboard - Supervisor
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="Dashboard-Analyst.html">
+                                        <span data-feather="home"></span>
+                                        Dashboard - Analyst
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <span data-feather="file"></span>
+                                Order Management
+                            </a>
+                            <!--ul class="flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="layers"></span>
+                  Order Inspection
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="layers"></span>
+                  Order Processing
+                </a>
+              </li>
+            </ul-->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pes_sources_management.html">
+                                <span data-feather="database"></span>
+                                Source Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services_management.html">
+                                <span data-feather="users"></span>
+                                Services Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ClientManagement.html">
+                                <span data-feather="user"></span>
+                                Customer Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="user"></span>
+                                Customer Portal Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="invoicing.html">
+                                <span data-feather="layers"></span>
+                                Invoicing
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="bar-chart-2"></span>
+                                Analytics
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="settings.html">
+                                <span data-feather="user"></span>
+                                Settings
+                            </a>
+                            <ul class="flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="UserManagement.html">
+                                        <span data-feather="user"></span>
+                                        User Management
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span data-feather="user"></span>
+                                        Workflow Management
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h6
+                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Optional</span><span data-feather="plus-circle"></span>
+                    </h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="user"></span>
+                                Implementation
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="users"></span>
+                                Feedback
+                            </a>
+                        </li>
+                    </ul>
+                    <h6
+                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Ticker</span><span data-feather="plus-circle"></span>
+                    </h6>
+                </div>
+            </nav>
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">New Order</h1>
+                </div>
+                <div class="container-fluid">
+                    <!-- content according to pes_inbox.html -->
+                    <div class="row p-4"></div>
+                    <h4>Plausibilitätsprüfung (durch den PES-Analysten)</h4>
+    
+    
+                    <div class="container-fluid">
+    
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h5><span data-feather="info" style="width: 18px;height: 18px;"></span>&nbspInformationen</span></h5>
+                                Bitte auf keinen Fall den aktuellen Arbeitgeber kontaktieren. Viele Grüße, TR
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="panel">
+                                    <div class="panel-heading">
+                                        <h5 class="panel-title"><span data-feather="file" style="width: 18px;height: 18px;"></span>&nbspAllgemeine Details</h5>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-sm">
+                                                <div>Kunde</div>
+                                                <div>ID</div>
+                                                <div>Level</strong></div>
+                                                <div>Auftragsverantwortlicher</strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm">
+                                            <div>Brainloop AG</div>
+                                            <div>123456</div>
+                                            <div>Enhanced</div>
+                                            <div>Mitarbeiter 3</div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12  col-lg-12">
+                                <div id="">
+                                    <div class="downloadFileData" id="">
+                                        <!-- <div class="hsmTitle demo_display_none">Download</div> -->
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <!-- <i class="fa fa-files-o" aria-hidden="true"></i> -->
+                                                <h5 class="panel-title">(Nachträglich) Hochgeladene
+                                                    Dokumente</h5>
+                                                <small>(Vorschau / Anzeige der Dokumente)</small>
+                                            </div>
+                                            <div class="panel-body">
+                                                <table id=""
+                                                    class="table table-striped nowrap dataTable no-footer dtr-inline"
+                                                    width="100%">
+                                                    <tbody>
+                                                        <tr class="odd gradeX">
+                                                            <td class="td-number">Lebenslauf
+                                                            </td>
+                                                            <td><span data-feather="file"></span>
+                                                            </td>
+                                                            <td class="td-mb">
+                                                                Lebenslauf_Mueller.pdf</td>
+                                                        </tr>
+                                                        <tr class="even">
+                                                            <td class="td-number">Zeugnis
+                                                            </td>
+                                                            <td><span data-feather="file"></span>
+                                                            </td>
+                                                            <td class="td-mb">
+                                                                Master_Mueller.pdf</td>
+                                                        </tr>
+                                                        <tr class="odd gradeX">
+                                                            <td class="td-number">EVE
+                                                            </td>
+                                                            <td><span data-feather="file"></span>
+                                                            </td>
+                                                            <td class="td-mb">
+                                                                Selbstauskunft.pdf</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="col-xs-12 col-sm-12 col-md-12  col-lg-12">
+                                <div id="">
+                                    <div class="downloadFileData" id="">
+                                        <!-- <div class="hsmTitle demo_display_none">Download</div> -->
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <!-- <i class="fa fa-files-o" aria-hidden="true"></i> -->
+                                                <h5 class="panel-title">Level Enhanced / Prüfumfang - Matching
+                                                    der Checks mit den Unterlagen</h5>
+                                            </div>
+                                            
+                                                <table class="table table-striped dataTable no-footer dtr-inline"
+                                                    width="100%">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Vollständig</th>
+                                                            <th>Check</th>
+                                                            <th>Durchführbar <small>(Kommentarauswahl)</small></th>
+                                                            <th style="min-width: 80px;">Land</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                                                            <td class="">Studium</td>
+                                                            <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                                                            <td>
+                                                                <select id="" class="form-control">
+                                                                    <option value="0">keine
+                                                                        Angaben
+                                                                        / Weltweit</option>
+                                                                    <option value="79">
+                                                                        Afghanistan
+                                                                    </option>
+                                                                    <option value="27">Albanien
+                                                                    </option>
+                                                                    <option value="80">Algerien
+                                                                    </option>
+                                                                    <option value="81">Andorra
+                                                                    </option>
+                                                                    <option value="82">Angola
+                                                                    </option>
+                                                                    <option value="83">Antigua
+                                                                        und
+                                                                        Barbuda</option>
+                                                                    <option value="38">
+                                                                        Argentinien
+                                                                    </option>
+                                                                    <option value="76">Armenien
+                                                                    </option>
+                                                                    <option value="16">
+                                                                        Australien
+                                                                    </option>
+                                                                    <option value="9">Österreich
+                                                                    </option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center"><input type="checkbox"
+                                                                    class="form-check-input">
+                                                            </td>
+                                                            <td class="">Studium
+                                                            </td>
+                                                            <td class="text-center"><input type="checkbox"
+                                                                    class="form-check-input">
+                                                            </td>
+                                                            <td>
+                                                                <select id="" class="form-control">
+                                                                    <option value="0">keine
+                                                                        Angaben
+                                                                        / Weltweit</option>
+                                                                    <option value="79">
+                                                                        Afghanistan
+                                                                    </option>
+                                                                    <option value="27">Albanien
+                                                                    </option>
+                                                                    <option value="80">Algerien
+                                                                    </option>
+                                                                    <option value="81">Andorra
+                                                                    </option>
+                                                                    <option value="82">Angola
+                                                                    </option>
+                                                                    <option value="83">Antigua
+                                                                        und
+                                                                        Barbuda</option>
+                                                                    <option value="38">
+                                                                        Argentinien
+                                                                    </option>
+                                                                    <option value="76">Armenien
+                                                                    </option>
+                                                                    <option value="16">
+                                                                        Australien
+                                                                    </option>
+                                                                    <option value="9">Österreich
+                                                                    </option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center"><input type="checkbox"
+                                                                    class="form-check-input">
+                                                            </td>
+                                                            <td class="">Arbeitgeber
+                                                            </td>
+                                                            <td class="text-center"><input type="checkbox"
+                                                                    class="form-check-input">
+                                                            </td>
+                                                            <td>
+                                                                <select id="" class="form-control">
+                                                                    <option value="0">keine
+                                                                        Angaben
+                                                                        / Weltweit</option>
+                                                                    <option value="79">
+                                                                        Afghanistan
+                                                                    </option>
+                                                                    <option value="27">Albanien
+                                                                    </option>
+                                                                    <option value="80">Algerien
+                                                                    </option>
+                                                                    <option value="81">Andorra
+                                                                    </option>
+                                                                    <option value="82">Angola
+                                                                    </option>
+                                                                    <option value="83">Antigua
+                                                                        und
+                                                                        Barbuda</option>
+                                                                    <option value="38">
+                                                                        Argentinien
+                                                                    </option>
+                                                                    <option value="76">Armenien
+                                                                    </option>
+                                                                    <option value="16">
+                                                                        Australien
+                                                                    </option>
+                                                                    <option value="9">Österreich
+                                                                    </option>
+                                                                </select>
+                                                        </tr>
+                                                        <tr class="even">
+                                                            <td class="text-center"><input type="checkbox"
+                                                                    class="form-check-input">
+                                                            </td>
+                                                            <td class="">Selbständigkeit
+                                                            </td>
+                                                            <td class="text-center"><input type="checkbox"
+                                                                    class="form-check-input">
+                                                            </td>
+                                                            <td>
+                                                                <select id="" class="form-control">
+                                                                    <option value="0">keine
+                                                                        Angaben
+                                                                        / Weltweit</option>
+                                                                    <option value="79">
+                                                                        Afghanistan
+                                                                    </option>
+                                                                    <option value="27">Albanien
+                                                                    </option>
+                                                                    <option value="80">Algerien
+                                                                    </option>
+                                                                    <option value="81">Andorra
+                                                                    </option>
+                                                                    <option value="82">Angola
+                                                                    </option>
+                                                                    <option value="83">Antigua
+                                                                        und
+                                                                        Barbuda</option>
+                                                                    <option value="38">
+                                                                        Argentinien
+                                                                    </option>
+                                                                    <option value="76">Armenien
+                                                                    </option>
+                                                                    <option value="16">
+                                                                        Australien
+                                                                    </option>
+                                                                    <option value="9">Österreich
+                                                                    </option>
+                                                                </select>
+                                                        </tr>
+                                                        <tr class="odd gradeX">
+                                                            <td class="text-center"><input type="checkbox"
+                                                                    class="form-check-input">
+                                                            </td>
+                                                            <td class="">Adressverifizierung
+                                                            </td>
+                                                            <td class="text-center"><input type="checkbox"
+                                                                    class="form-check-input">
+                                                            </td>
+                                                            <td>
+                                                                <select id="" class="form-control">
+                                                                    <option value="0">keine
+                                                                        Angaben
+                                                                        / Weltweit</option>
+                                                                    <option value="79">
+                                                                        Afghanistan
+                                                                    </option>
+                                                                    <option value="27">Albanien
+                                                                    </option>
+                                                                    <option value="80">Algerien
+                                                                    </option>
+                                                                    <option value="81">Andorra
+                                                                    </option>
+                                                                    <option value="82">Angola
+                                                                    </option>
+                                                                    <option value="83">Antigua
+                                                                        und
+                                                                        Barbuda</option>
+                                                                    <option value="38">
+                                                                        Argentinien
+                                                                    </option>
+                                                                    <option value="76">Armenien
+                                                                    </option>
+                                                                    <option value="16">
+                                                                        Australien
+                                                                    </option>
+                                                                    <option value="9">Österreich
+                                                                    </option>
+                                                                </select>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div class="btn-toolbar mb-2 mb-md-0">
+                                                    <div class="btn-group me-2">
+                                                            <button type="button" class="btn btn-sm btn-outline-secondary"><span data-feather="plus"></span>&nbspAdd Check</button>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Checks that can be conducted according to table above-->
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="panel-group" id="accordionAdvanced" role="tablist" aria-multiselectable="true">
+                                    <!-- 1 PANEL -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="advancedTraining">
+                                            <h5 class="panel-title">
+                                                <a href="#collapseOne_advancedTraining" class="" aria-expanded="false"
+                                                    role="button" data-toggle="collapse" data-parent="#accordionAdvanced"
+                                                    onclick="javascript:loadForm('advancedVocationalTraining')">
+                                                    <i class="fa fa-graduation-cap panel-title_icon"></i>
+                                                    Studium
+                                                </a>
+                                            </h5>
+                                        </div>
+    
+                                        <div id="collapseOne_advancedTraining" class="collapse" role="tabpanel">
+                                            <div class="panel-body">
+                                                <div id="advancedVocationalTraining" class="">
+    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 2 PANEL -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="vocationalTrainingPannel">
+                                            <h5 class="panel-title">
+                                                <a href="#collapseTwo_vocationalTraining" class="" aria-expanded="false"
+                                                    role="button" data-toggle="collapse" data-parent="#accordionAdvanced"
+                                                    onclick="javascript:loadForm('vocationalTraining')">
+                                                    <i class="fa fa-graduation-cap panel-title_icon"></i>
+                                                    Studium
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseTwo_vocationalTraining" class="collapse" role="tabpanel">
+                                            <div class="panel-body">
+                                                <div id="vocationalTraining" class="">
+    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 3 PANEL -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="degreePanel">
+                                            <h5 class="panel-title">
+                                                <a href="#collapseThree_Degree" class="" aria-expanded="false" role="button"
+                                                    data-toggle="collapse" data-parent="#accordionAdvanced"
+                                                    onclick="javascript:loadForm('degree')">
+                                                    <i class="fa fa-briefcase panel-title_icon"></i>
+                                                    Arbeitsverhältnis</a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseThree_Degree" class="collapse" role="tabpanel">
+                                            <div class="panel-body">
+                                                <div id="degree" class=""></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 4 PANEL -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="employmentPanel">
+                                            <h5 class="panel-title">
+                                                <a href="#collapseFour_Career" class="" aria-expanded="false" role="button"
+                                                    data-toggle="collapse" data-parent="#accordionAdvanced"
+                                                    onclick="javascript:loadForm('employment')">
+                                                    <i class="fa fa-briefcase panel-title_icon"></i>
+                                                    Selbständigkeit
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseFour_Career" class="collapse" role="tabpanel">
+                                            <div class="panel-body">
+                                                <div id="employment" class=""></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 5 PANEL -->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="selfemploymentPanel">
+                                            <h5 class="panel-title">
+                                                <a href="#collapseFive_Selfemployment" class="" aria-expanded="false"
+                                                    role="button" data-toggle="collapse" data-parent="#accordionAdvanced"
+                                                    onclick="javascript:loadForm('selfEmployment')">
+                                                    <i class="fa fa-address-card panel-title_icon"></i>
+                                                    Adressverifizierung
+                                                </a>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseFive_Selfemployment" class="collapse" role="tabpanel">
+                                            <div class="panel-body">
+                                                <div id="selfEmployment" class=""></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-toolbar mb-2">
+                            <div class="btn-group m-auto">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="alert('Kunde wird über fehlende Unterlagen (per E-Mail / Portal) informiert.');"><span data-feather="minus-circle"></span>&nbspDecline</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary" onclick="alert('Der Auftrag wird dem Supervisor zur Prüfung vorgelegt.');document.location.href='#'"><span data-feather="arrow-right"></span>&nbspHand To Supervisor for Approval</button>
+                                    <a href="pes_analyst_inbox_orders.html" class="btn btn-sm btn-outline-secondary"><span data-feather="arrow-left"></span>&nbspBack</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/feather.min.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>
