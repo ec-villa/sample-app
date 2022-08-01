@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>Customer Management - New Customer</title>
+
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Company name</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="#">Sign out</a>
+            </li>
+        </ul>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Dashboard.html">
+                                <span data-feather="home"></span>
+                                Dashboard
+                            </a>
+                            <ul>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="Dashboard-Controller.html">
+                                        <span data-feather="home"></span>
+                                        Dashboard - Controller
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">
+                                        <span data-feather="home"></span>
+                                        Dashboard - Supervisor
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="Dashboard-Analyst.html">
+                                        <span data-feather="home"></span>
+                                        Dashboard - Analyst
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="order_management.html">
+                                <span data-feather="file"></span>
+                                Order Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pes_sources_management.html">
+                                <span data-feather="database"></span>
+                                Source Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services_management.html">
+                                <span data-feather="users"></span>
+                                Services Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="ClientManagement.html">
+                                <span data-feather="user"></span>
+                                Customer Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="CustomerPortalManagement.html">
+                                <span data-feather="user"></span>
+                                Customer Portal Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="invoicing.html">
+                                <span data-feather="layers"></span>
+                                Invoicing
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Analytics.html">
+                                <span data-feather="bar-chart-2"></span>
+                                Analytics
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="settings.html">
+                                <span data-feather="user"></span>
+                                Settings
+                            </a>
+                            <ul class="flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="UserManagement.html">
+                                        <span data-feather="user"></span>
+                                        User Management
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span data-feather="user"></span>
+                                        Workflow Management
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h6
+                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Optional</span><span data-feather="plus-circle"></span>
+                    </h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="user"></span>
+                                Implementation
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="users"></span>
+                                Feedback
+                            </a>
+                        </li>
+                    </ul>
+                    <h6
+                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Ticker / Messaging</span><span data-feather="plus-circle"></span>
+                    </h6>
+                </div>
+            </nav>
+
+
+            <main class="col-sm-12 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">New Customer</h1>
+                </div>
+
+                <div class="row py-2"></div>
+                <h4>Allgemeine Angaben zum Kunden</h4>
+
+
+
+                <div class="form-row d-flex justify-content-between">
+                    <!--Eingabe prüfen, ob Kundenname schon vorhanden, leeren String NICHT akzeptieren-->
+                    <div class="form-group col-sm-6 p-3">
+                        <label for="in_untName">Vollständiger Name des Kunden</label>
+                        <input type="text" class="form-control" id="in_untName">
+                    </div>
+                    <div class="form-group col-sm-6 p-3" style="color: red;">
+                        <label for="">Anzeigename / Kurzname</label>
+                        <input type="text" class="form-control" id="">
+                    </div>
+
+                </div>
+                <div class="form-row d-flex justify-content-between">
+                    <div class="form-group col-sm-3 p-3">
+                        <label for="in_strNr" class="form-label">Straße, Nr.</label>
+                        <input type="text" class="form-control" id="in_strNr">
+                    </div>
+                    <div class="form-group col-sm-3 p-3">
+                        <label for="in_plz" class="form-label">PLZ</label>
+                        <input type="text" class="form-control" id="in_plz">
+                    </div>
+                    <div class="form-group col-sm-3 p-3">
+                        <label for="in_plz" class="form-label">Ort</label>
+                        <input type="text" class="form-control" id="in_ort">
+                    </div>
+                    <div class="form-group col-sm-3 p-3">
+                        <label for="sl_land" class="form-label">Land</label>
+                        <select class="form-control" id="sl_land">
+                            <option>Angola</option>
+                            <option>Deutschland</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-row d-flex justify-content-left">
+                    <div class="form-group col-sm-3 p-3">
+                        <label for="in_ustID" class="">USt.-ID / VAT</label>
+                        <input type="text" class="form-control" id="in_ustID">
+                    </div>
+                    <div class="form-check form-check-inline col-sm-2 p-3 m-3">
+
+                        <label class="form-check-label mx-2" for="defaultCheck1">
+                            Lieferadresse entspricht Rechnungsadresse
+                        </label>
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    </div>
+                </div>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="acc-vertraege">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#col-vertraege" aria-expanded="false" aria-controls="col-vertraege">
+                                Verträge
+                            </button>
+                        </h2>
+                        <div id="col-vertraege" class="accordion-collapse collapse" aria-labelledby="acc-vertraege"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <h4>Angaben zum Vertrag</h4>
+                                <div class="form-row mx-2">
+                                    <div class="form-group col-sm-6">
+                                        <label for="sl_verTyp" class="col-form-label">Vertragstyp</label>
+                                        <select class="form-control" id="sl_verTyp">
+                                            <option>Rahmenvertrag</option>
+                                            <option>Auftragsdatenverarbeitung (Einzelaufträge)</option>
+                                        </select>
+                                        <button class="btn btn-upload mt-1">Hochladen</button>
+                                    </div>
+                                    <div class="form-group col-sm-6">
+                                        <label for="tb_verBest" class="col-form-label">Zusätzliche Dokumente /
+                                            Bestandteile
+                                            des Vertrags</label>
+                                        <table class="" id="">
+                                            <thead></thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="defaultCheck1">
+                                                        </div>
+                                                    </td>
+                                                    <td>Service Level Agreement</td>
+                                                    <td><button class="btn btn-upload">Hochladen</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="defaultCheck1">
+                                                        </div>
+                                                    </td>
+                                                    <td>Code of Conduct</td>
+                                                    <td><button class="btn btn-upload">Hochladen</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="defaultCheck1"
+                                                                onChange="javascript: alert('Name des Dokuments eingeben');">
+                                                        </div>
+                                                    </td>
+                                                    <td>Sonstige</td>
+                                                    <td><button class="btn btn-upload">Hochladen</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="form-row mx-2">
+                                    <div class="form-group col-sm">
+                                        <label class="col-form-label" for="in_verBeg">Vertragsbeginn</label>
+                                        <input type="date" class="form-control" id="in_verBeg">
+                                    </div>
+                                    <div class="form-group col-sm">
+                                        <label class="col-form-label" for="in_verEnd">Vertragsende</label>
+                                        <input type="date" class="form-control" id="in_verEnd">
+                                    </div>
+                                    <div class="form-group col-sm">
+                                        <label for="sl_verVerl" class="col-form-label">Vertragsverlängerung</label>
+                                        <select class="form-control" id="">
+                                            <option>muss nach Vertragsende neu verhandelt werden</option>
+                                            <option>automatisch um ein Jahr</option>
+                                        </select>
+                                    </div>
+                                    <!--Kündigungsfrist, select-->
+                                    <div class="form-group col-sm">
+                                        <label for="sl_verKuen" class="col-form-label">Kündigungsfrist</label>
+                                        <select class="form-control" id="sl_verKuen">
+                                            <option>3 Monate vor Vertragsende</option>
+                                            <option>4 Wochen vor Vertragsende</option>
+                                            <option>sofort</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-sm-3">
+                                        <label class="col-form-label" for="">Vertragsstatus</label>
+                                        <select class="form-control" id="">
+                                            <option>aktiv</option>
+                                            <option>gekündigt</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="acc-datentransfer">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#col-datentransfer" aria-expanded="false"
+                                aria-controls="col-datentransfer">
+                                Datentransfer
+                            </button>
+                        </h2>
+                        <div id="col-datentransfer" class="accordion-collapse collapse"
+                            aria-labelledby="acc-datentransfer" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <div class="form-row mx-2">
+                                    <!--Datentransfer-->
+                                    <div class="form-group col-sm">
+                                        <label for="sl_datTra" class="col-form-label">Datentransfer</label>
+                                        <select class="form-control" id="sl_datTra">
+                                            <option
+                                                onclick="document.getElementById('in_pacNr').style.visibility = 'hidden'">
+                                                SIGNUM-Cloud
+                                            </option>
+                                            <option
+                                                onclick="document.getElementById('in_pacNr').style.visibility = 'visible'">
+                                                Kundenportal
+                                            </option>
+                                            <option
+                                                onclick="document.getElementById('in_pacNr').style.visibility = 'hidden'">
+                                                Datenraum des Kunden
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <!--PAC-->
+                                    <div class="form-group col-sm" id="in_pacNr">
+                                        <label for="in_aufNr" class="col-form-label">PAC-Nr.</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="d-grid gap-2 mt-3 d-md-flex justify-content-md-end">
+                                        <button type="button" class="btn btn-outline-secondary"><span data-feather="plus"></span>&nbsp
+                                            Weiterer Datenstransfer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="acc-personen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#col-personen" aria-expanded="false" aria-controls="col-personen">
+                                Kontaktpersonen
+                            </button>
+                        </h2>
+                        <div id="col-personen" class="accordion-collapse collapse" aria-labelledby="acc-personen"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <h4>Kontaktpersonen</h4>
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button type="button" class="btn btn-outline-secondary"><span data-feather="plus"></span>&nbsp
+                                        Neue
+                                        Kontaktperson</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="acc-unternehmen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#col-unternehmen" aria-expanded="false" aria-controls="col-unternehmen">
+                                Unternehmen
+                            </button>
+                        </h2>
+                        <div id="col-unternehmen" class="accordion-collapse collapse" aria-labelledby="acc-unternehmen"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <h4>Unternehmen</h4>
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button type="button" class="btn btn-outline-secondary"><span data-feather="plus"></span>&nbsp
+                                            Neues
+                                            Unternehmen</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="acc-bestellungen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#col-bestellungen" aria-expanded="false"
+                                aria-controls="col-bestellungen">
+                                Bestellungen (optional)
+                            </button>
+                        </h2>
+                        <div id="col-bestellungen" class="accordion-collapse collapse"
+                            aria-labelledby="acc-bestellungen" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="acc-rechnungsinformationen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#col-rechnungsinformationen" aria-expanded="false"
+                                aria-controls="col-rechnungsinformationen">
+                                Rechnungsinformationen
+                            </button>
+                        </h2>
+                        <div id="col-rechnungsinformationen" class="accordion-collapse collapse"
+                            aria-labelledby="acc-rechnungsinformationen" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <h5>Rechnungsadresse</h5>
+                                <div class="form-row">
+                                    <div class="form-check form-check-inline col-sm-6">
+                                        <input class="form-check-input" type="checkbox" value=""
+                                            onclick="alert('Aus Kontaktpersonen auswählen oder neu anlegen. Position in Rechnung angeben [1. Zeile | unterhalb des Firmennamens]');">
+                                        <label class="form-check-label mx-2" for="">
+                                            Ansprechpartner mit/ohne Fachabteilung angeben
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-sm">
+                                        <label class="col-form-label">Straße, Nr. / Postfach</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-sm">
+                                        <label class="col-form-label">PLZ</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group col-sm">
+                                        <label class="col-form-label">Ort</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group col-sm">
+                                        <label class="col-form-label">Land</label>
+                                        <select class="form-control">
+                                            <option>Argentinien</option>
+                                            <option>Deutschland</option>
+                                            <option>Schweiz</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <h5>Umsatzsteuer</h5>
+                                <div class="form-row">
+                                    <div class="form-group col-sm">
+                                        <label class="col-form-label">USt.-ID</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-check form-check-inline col-sm">
+                                        <input class="form-check-input" type="checkbox" value="" onclick="">
+                                        <label class="form-check-label mx-2" for="">
+                                            Umsatzsteuer berechnen
+                                        </label>
+                                    </div>
+                                    <div class="form-group col-sm">
+                                        <label class="col-form-label">Umsatzsteuer</label>
+                                        <select class="form-control">
+                                            <option>16 %</option>
+                                            <option>19 %</option>
+                                            <option>0 %</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <h5>Anzugebende Kennnummern</h5>
+                                <div class="form-row">
+                                    <table>
+                                        <thead></thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                                    </div>
+                                                </td>
+                                                <td>Kostenstelle</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                                    </div>
+                                                </td>
+                                                <td>Bestellnummer</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                                    </div>
+                                                </td>
+                                                <td>Lieferantennummer</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <h5>Rechnungsversand</h5>
+                                <div class="form-row">
+                                    <table>
+                                        <thead></thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                                    </div>
+                                                </td>
+                                                <td><label class="col-form-label">E-Mail</label></td>
+                                                <td></td>
+                                                <td><input type="email" class="form-control" value="E-Mail-Adresse">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                                    </div>
+                                                </td>
+                                                <td>Portal</td>
+                                                <td></td>
+                                                <td><input type="text" class="form-control" value="Link"></td>
+                                                <td><input type="text" class="form-control" value="Benutzername"></td>
+                                                <td><input type="text" class="form-control" value="Passwort"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                                    </div>
+                                                </td>
+                                                <td>Post</td>
+                                                <td>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" value="" id="">
+                                                    </div>in Rechnung stellen
+                                                </td>
+                                                <td><input type="text" class="form-control"
+                                                        value="Betrag in Rg.-Währung">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="acc-services">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#col-services" aria-expanded="false" aria-controls="col-services">
+                                Services
+                            </button>
+                        </h2>
+                        <div id="col-services" class="accordion-collapse collapse" aria-labelledby="acc-services"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <h4>PES - Angaben zu Processing Modes</h4>
+                                <div class="form-row">
+                                    <div class="form-group col-sm">
+                                        <label class="col-form-label">Name</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group col-sm">
+                                        <label class="col-form-label">TAT Inland</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group col-sm">
+                                        <label class="col-form-label">TAT Ausland</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group col-sm">
+                                        <label class="col-form-label">Statusbericht nach Tagen</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-row col-sm">
+                                    <div class="form-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" value="" id="">
+                                            <label class="form-check-label mx-2">Kontakt zum Bewerber</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" value="" id="">
+                                            <label class="form-check-label mx-2">Kontakt zum akt. Arbeitgeber</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="accordion">Level</button>
+                                <div class="acc-panel">
+                                    <h5>Level</h5>
+                                </div>
+                                <button class="accordion">Ländergruppen</button>
+                                <div class="acc-panel">
+                                    <h5>Ländergruppen</h5>
+                                </div>
+                                <button class="accordion">Preise</button>
+                                <div class="acc-panel">
+                                    <h5>Preise</h5>
+                                    <div class="form-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" value="" id="">
+                                            <label class="form-check-label mx-2">Zusatzkosten werden in Rechnung
+                                                gestellt</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                    <button type="button" class="btn btn-outline-secondary">+ Processing Mode</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <small class="mt-3">Bearbeitung: Angaben zuletzt geändert von User xx am 01.01.1970.</small>
+                
+
+            </main>
+        </div>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        } 
+    </script>
+    <!-- jQuery slim min 351>
+      <script src="../lib/js/jquery.min.js"></script>
+      <script src="../lib/4.5/js/bootstrap.bundle.js"></script>
+      <script src="../lib/js/dashboard.js"></script-->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/feather.min.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>
