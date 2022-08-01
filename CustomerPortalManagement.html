@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>Customer Portal Management</title>
+
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .nav-space {
+            padding-right: 1px;
+        }
+
+        .deactivated {
+            color: black !important;
+            background-color: lightgray;
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Company name</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="#">Sign out</a>
+            </li>
+        </ul>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Dashboard.html">
+                                <span data-feather="home"></span>
+                                Dashboard
+                            </a>
+                            <ul>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="Dashboard-Controller.html">
+                                        <span data-feather="home"></span>
+                                        Dashboard - Controller
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">
+                                        <span data-feather="home"></span>
+                                        Dashboard - Supervisor
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="Dashboard-Analyst.html">
+                                        <span data-feather="home"></span>
+                                        Dashboard - Analyst
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="order_management.html">
+                                <span data-feather="file"></span>
+                                Order Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pes_sources_management.html">
+                                <span data-feather="database"></span>
+                                Source Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services_management.html">
+                                <span data-feather="users"></span>
+                                Services Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ClientManagement.html">
+                                <span data-feather="user"></span>
+                                Customer Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="CustomerPortalManagement">
+                                <span data-feather="user"></span>
+                                Customer Portal Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="invoicing.html">
+                                <span data-feather="layers"></span>
+                                Invoicing
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="bar-chart-2"></span>
+                                Analytics
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="settings.html">
+                                <span data-feather="user"></span>
+                                Settings
+                            </a>
+                            <ul class="flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="UserManagement.html">
+                                        <span data-feather="user"></span>
+                                        User Management
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span data-feather="user"></span>
+                                        Workflow Management
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h6
+                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Optional</span><span data-feather="plus-circle"></span>
+                    </h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="user"></span>
+                                Implementation
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="users"></span>
+                                Feedback
+                            </a>
+                        </li>
+                    </ul>
+                    <h6
+                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Ticker / Messaging</span><span data-feather="plus-circle"></span>
+                    </h6>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Customer Portal Management</h1>
+                </div>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item nav-space" role="presentation">
+                        <button class="nav-link active" id="user-tab" data-bs-toggle="tab" data-bs-target="#user"
+                            type="button" role="tab" aria-controls="user" aria-selected="true">User</button>
+                    </li>
+                    <li class="nav-item nav-space" role="presentation">
+                        <button class="nav-link" id="appgroup-tab" data-bs-toggle="tab" data-bs-target="#appgroup"
+                            type="button" role="tab" aria-controls="appgroup" aria-selected="false">Applicant
+                            Group</button>
+                    </li>
+                    <li class="nav-item nav-space" role="presentation">
+                        <button class="nav-link" id="costcenter-tab" data-bs-toggle="tab" data-bs-target="#costcenter"
+                            type="button" role="tab" aria-controls="costcenter" aria-selected="false">Cost
+                            Center</button>
+                    </li>
+                    <li class="nav-item nav-space" role="presentation">
+                        <button class="nav-link" id="companycode-tab" data-bs-toggle="tab" data-bs-target="#companycode"
+                            type="button" role="tab" aria-controls="companycode" aria-selected="false">Company
+                            Code</button>
+                    </li>
+                </ul>
+                <div class="border border-top-0 p-2">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="user" role="tabpanel" aria-labelledby="user-tab">
+                            <h2>User List</h2>
+                            <div class="btn-toolbar">
+                                <div class="btn-group m-auto" role="group" aria-label="Button Group Actions">
+                                    <button type="button" class="btn btn-primary btn-sm"><span data-feather="user-plus"></span>&nbspNew User</button>
+                                </div>
+                            </div>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">User-ID</th>
+                                        <th scope="col">E-Mail</th>
+                                        <th scope="col">Username</th>
+                                        <th scope="col">Last Name</th>
+                                        <th scope="col">First Name</th>
+                                        <th scope="col">Active</th>
+                                        <th scope="col">Actions</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>user1@mail.com</td>
+                                        <td>user1@mail.com</td>
+                                        <td>Miller</td>
+                                        <td>Mark</td>
+                                        <td>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                    value="" id="flexCheckChecked" checked disabled></div>
+                                        </td>
+                                        <td>
+                                            <div class="d-grid gap-2 d-md-block">
+                                                <button type="button" class="btn btn-secondary btn-sm">Details</button>
+                                                <button type="button" class="btn btn-danger btn-sm"><span
+                                                        data-feather="delete"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>user2@mail.com</td>
+                                        <td>user2@mail.com</td>
+                                        <td>Meir</td>
+                                        <td>Mike</td>
+                                        <td>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                    value="" id="flexCheckChecked" checked disabled></div>
+                                        </td>
+                                        <td>
+                                            <div class="d-grid gap-2 d-md-block">
+                                                <button type="button" class="btn btn-secondary btn-sm">Details</button>
+                                                <button type="button" class="btn btn-danger btn-sm"><span
+                                                        data-feather="delete"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="deactivated">
+                                        <th scope="row">3</th>
+                                        <td colspan="1">user3@mail.com</td>
+                                        <td>user3@mail.com</td>
+                                        <td>Smith</td>
+                                        <td>Steven</td>
+                                        <td>
+                                            <div class="form-check"><input class="form-check-input" type="checkbox"
+                                                    value="" id="flexCheckChecked" disabled></div>
+                                        </td>
+                                        <td>
+                                            <div class="d-grid gap-2 d-md-block">
+                                                <button type="button" class="btn btn-secondary btn-sm">Details</button>
+                                                <button type="button" class="btn btn-danger btn-sm"><span
+                                                        data-feather="delete"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="appgroup" role="tabpanel" aria-labelledby="profile-tab">
+                            <h2>Applicant Group List</h2>
+                            <div class="btn-toolbar">
+                                <div class="btn-group m-auto" role="group" aria-label="Button Group Actions">
+                                    <button type="button" class="btn btn-primary btn-sm"><span data-feather="user-plus"></span>&nbspNew Applicant Group</button>
+                                </div>
+                            </div>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Applicant Group Name</th>
+                                        <th>Active</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Trainees</td>
+                                        <td><div class="form-check"><input class="form-check-input" type="checkbox"
+                                            value="" id="flexCheckChecked" checked disabled></div></td></td>
+                                        <td>
+                                            <div class="d-grid gap-2 d-md-block">
+                                                <button type="button" class="btn btn-secondary btn-sm">Details</button>
+                                                <button type="button" class="btn btn-danger btn-sm"><span
+                                                        data-feather="delete"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Professionals</td>
+                                        <td><div class="form-check"><input class="form-check-input" type="checkbox"
+                                            value="" id="flexCheckChecked" checked disabled></div></td>
+                                        <td>
+                                            <div class="d-grid gap-2 d-md-block">
+                                                <button type="button" class="btn btn-secondary btn-sm">Details</button>
+                                                <button type="button" class="btn btn-danger btn-sm"><span
+                                                        data-feather="delete"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="deactivated">
+                                        <td colspan="1">Intern</td>
+                                        <td><div class="form-check"><input class="form-check-input" type="checkbox"
+                                            value="" id="flexCheckChecked"></div></td>
+                                        <td>
+                                            <div class="d-grid gap-2 d-md-block">
+                                                <button type="button" class="btn btn-secondary btn-sm">Details</button>
+                                                <button type="button" class="btn btn-danger btn-sm"><span
+                                                        data-feather="delete"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="costcenter" role="tabpanel" aria-labelledby="costcenter-tab">
+                            <h2>Cost Center List</h2>
+                            <div class="btn-toolbar">
+                                <div class="btn-group m-auto" role="group" aria-label="Button Group Actions">
+                                    <button type="button" class="btn btn-primary btn-sm"><span data-feather="user-plus"></span>&nbspNew Cost Center</button>
+                                </div>
+                            </div>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Cost Center Name</th>
+                                        <th>Active</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>10112233</td>
+                                        <td><div class="form-check"><input class="form-check-input" type="checkbox"
+                                            value="" id="flexCheckChecked" checked disabled></div></td></td>
+                                        <td>
+                                            <div class="d-grid gap-2 d-md-block">
+                                                <button type="button" class="btn btn-secondary btn-sm">Details</button>
+                                                <button type="button" class="btn btn-danger btn-sm"><span
+                                                        data-feather="delete"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>20112233</td>
+                                        <td><div class="form-check"><input class="form-check-input" type="checkbox"
+                                            value="" id="flexCheckChecked4" checked disabled></div></td>
+                                        <td>
+                                            <div class="d-grid gap-2 d-md-block">
+                                                <button type="button" class="btn btn-secondary btn-sm">Details</button>
+                                                <button type="button" class="btn btn-danger btn-sm"><span
+                                                        data-feather="delete"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="deactivated">
+                                        <td colspan="1">ABC123456</td>
+                                        <td><div class="form-check"><input class="form-check-input" type="checkbox"
+                                            value="" id="flexCheckChecked5"></div></td>
+                                        <td>
+                                            <div class="d-grid gap-2 d-md-block">
+                                                <button type="button" class="btn btn-secondary btn-sm">Details</button>
+                                                <button type="button" class="btn btn-danger btn-sm"><span
+                                                        data-feather="delete"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="companycode" role="tabpanel" aria-labelledby="companycode-tab">
+                            <h2>Company Code List</h2>
+                            <div class="btn-toolbar">
+                                <div class="btn-group m-auto" role="group" aria-label="Button Group Actions">
+                                    <button type="button" class="btn btn-primary btn-sm"><span data-feather="user-plus"></span>&nbspNew Company Code</button>
+                                </div>
+                            </div>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Cost Center Name</th>
+                                        <th>Active</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Company 3 Ltd.</td>
+                                        <td><div class="form-check"><input class="form-check-input" type="checkbox"
+                                            value="" id="flexCheckChecked6" checked disabled></div></td></td>
+                                        <td>
+                                            <div class="d-grid gap-2 d-md-block">
+                                                <button type="button" class="btn btn-secondary btn-sm">Details</button>
+                                                <button type="button" class="btn btn-danger btn-sm"><span
+                                                        data-feather="delete"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Company 2 Ltd.</td>
+                                        <td><div class="form-check"><input class="form-check-input" type="checkbox"
+                                            value="" id="flexCheckChecked7" checked disabled></div></td>
+                                        <td>
+                                            <div class="d-grid gap-2 d-md-block">
+                                                <button type="button" class="btn btn-secondary btn-sm">Details</button>
+                                                <button type="button" class="btn btn-danger btn-sm"><span
+                                                        data-feather="delete"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="deactivated">
+                                        <td colspan="1">Company 1 Ltd.</td>
+                                        <td><div class="form-check"><input class="form-check-input" type="checkbox"
+                                            value="" id="flexCheckChecked8"></div></td>
+                                        <td>
+                                            <div class="d-grid gap-2 d-md-block">
+                                                <button type="button" class="btn btn-secondary btn-sm">Details</button>
+                                                <button type="button" class="btn btn-danger btn-sm"><span
+                                                        data-feather="delete"></button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/feather.min.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>
